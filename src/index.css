@@ -24,8 +24,8 @@
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-lg
-           bg-brand-red px-6 py-3 text-sm font-semibold
-           text-white transition hover:bg-brand-redMuted;
+           bg-red-500 px-6 py-3 text-sm font-semibold
+           text-white transition hover:bg-red-400;
   }
 
   .section {
@@ -35,4 +35,37 @@
   .card {
     @apply rounded-xl bg-dark-850 p-6 shadow-card;
   }
+}
+
+
+@keyframes gradientSlow {
+  0% {
+    transform: translate(-10%, -10%);
+  }
+  50% {
+    transform: translate(10%, 10%);
+  }
+  100% {
+    transform: translate(-10%, -10%);
+  }
+}
+
+@keyframes gradientSlower {
+  0% {
+    transform: translate(10%, -10%);
+  }
+  50% {
+    transform: translate(-10%, 10%);
+  }
+  100% {
+    transform: translate(10%, -10%);
+  }
+}
+
+.animate-gradient-slow {
+  animation: gradientSlow 28s ease-in-out infinite;
+}
+
+.animate-gradient-slower {
+  animation: gradientSlower 40s ease-in-out infinite;
 }
