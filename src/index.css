@@ -6,6 +6,9 @@
    BASE STYLES
    ========================= */
 @layer base {
+  * {
+    @apply transition-colors duration-200
+  }
   html {
     @apply bg-dark-950 text-text-primary;
   }

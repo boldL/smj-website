@@ -1,29 +1,34 @@
 import { useNavigate } from 'react-router-dom'
 
+import equipmentHireImg from '../assets/home/equipmentHireImg.png'
+import generalSupplyImg from '../assets/home/generalSupplyImg.png'
+import miningImg from '../assets/home/miningImg.png'
+import travelImg from '../assets/home/travelImg.png'
+
 const sections = [
   {
     title: 'Mining Equipment & Consumables',
     subtitle: 'Diamond drilling tools & technical supply',
     route: '/mining-supply',
-    accent: 'from-neutral-900 to-neutral-800',
+    image: miningImg,
   },
   {
     title: 'General Supply',
     subtitle: 'PPE, logistics & industrial sourcing',
     route: '/general-supply',
-    accent: 'from-neutral-800 to-neutral-700',
+    image: generalSupplyImg,
   },
   {
     title: 'Travel, Safaris & Vehicle Hire',
     subtitle: 'Leisure-first mobility with corporate support',
     route: '/travel-logistics',
-    accent: 'from-neutral-700 to-neutral-800',
+    image: travelImg,
   },
   {
     title: 'Equipment & Machinery Hire',
     subtitle: 'Reliable machines for demanding environments',
     route: '/equipment-hire',
-    accent: 'from-neutral-800 to-neutral-900',
+    image: equipmentHireImg,
   },
 ]
 
@@ -36,29 +41,57 @@ export default function Home() {
         <div
           key={index}
           onClick={() => navigate(section.route)}
-          className={`
-            relative cursor-pointer overflow-hidden
+          className="
+            group relative cursor-pointer overflow-hidden
             flex items-center justify-center
-            bg-gradient-to-b ${section.accent}
-            transition-all duration-500
+            transition-all duration-500 ease-out
             hover:z-10 hover:scale-[1.02]
-          `}
+          "
+          style={{
+            backgroundImage: `url(${section.image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
         >
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/50 hover:bg-black/30 transition" />
+          <div className="
+            absolute inset-0
+            bg-black/60
+            group-hover:bg-black/40
+            transition-colors duration-500
+          " />
 
           {/* Content */}
-          <div className="relative z-10 text-center px-6 max-w-sm">
+          <div className="
+            relative z-10 text-center px-6 max-w-sm
+            transition-all duration-500 ease-out
+            translate-y-4 opacity-90
+            group-hover:translate-y-0 group-hover:opacity-100
+          ">
             <h1 className="text-2xl lg:text-3xl font-bold mb-3">
               {section.title}
             </h1>
-            <p className="text-text-secondary text-sm lg:text-base">
+            <p className="text-text-secondary text-sm lg:text-base mb-6">
               {section.subtitle}
             </p>
+
+            <span className="
+              inline-block text-sm font-medium tracking-wide
+              text-brand-red
+              opacity-0 group-hover:opacity-100
+              transition-opacity duration-500
+            ">
+              Click to explore →
+            </span>
           </div>
 
-          {/* Hover accent bar */}
-          <div className="absolute bottom-0 left-0 h-1 w-0 bg-brand-red transition-all duration-500 hover:w-full" />
+          {/* Accent bar */}
+          <div className="
+            absolute bottom-0 left-0 h-1 w-0
+            bg-brand-red
+            transition-all duration-500
+            group-hover:w-full
+          " />
         </div>
       ))}
     </div>

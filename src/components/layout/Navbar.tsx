@@ -11,7 +11,7 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 z-50 w-full backdrop-blur bg-dark-900/80 border-b border-dark-700">
+    <header className="fixed top-0 z-50 w-full backdrop-blur bg-dark-900/70 border-b border-dark-700 transition-colors duration-300">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-16 items-center justify-between">
           
