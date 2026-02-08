@@ -49,7 +49,7 @@ export default function Navbar() {
                 <img
                   src={smjLogo}
                   alt="SMJ Logo"
-                  className="h-8 w-auto object-contain"
+                  className="h-14 w-auto object-contain"
                 />
               </div>
             </div>
