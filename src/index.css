@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   BASE STYLES
+   ========================= */
+@layer base {
+  html {
+    @apply bg-dark-950 text-text-primary;
+  }
+
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+/* =========================
+   COMPONENT UTILITIES
+   ========================= */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg
+           bg-brand-red px-6 py-3 text-sm font-semibold
+           text-white transition hover:bg-brand-redMuted;
+  }
+
+  .section {
+    @apply py-20;
+  }
+
+  .card {
+    @apply rounded-xl bg-dark-850 p-6 shadow-card;
+  }
+}
