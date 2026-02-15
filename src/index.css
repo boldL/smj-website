@@ -69,3 +69,12 @@
 .animate-gradient-slower {
   animation: gradientSlower 40s ease-in-out infinite;
 }
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
