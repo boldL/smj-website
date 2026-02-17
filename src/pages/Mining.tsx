@@ -7,7 +7,7 @@ import miningImg from '../assets/home/miningImg.png'
 import drillRods from '../assets/mining/drill-rods.jpg'
 import drillCons from '../assets/mining/drill_cons.png'
 import drillingBits from '../assets/mining/dd-bits.jpg'
-import chuckJaws from '../assets/mining/chuck-jaws.jpg'
+import headAssembly from '../assets/mining/head-assembly.jpg'
 import overshot from '../assets/mining/overshot.jpg'
 import reamerBit from '../assets/mining/reamer-and-bit.jpg'
 import waterSwivel from '../assets/mining/water-swivel.jpg'
@@ -15,9 +15,9 @@ import wrenches from '../assets/mining/wrenches.jpg'
 
 const products = [
   { img: drillRods, label: 'Drill Rods' },
-  { img: drillCons, label: 'Drilling Consumables' },
+  { img: drillCons, label: 'Head & Overshot Assy Parts' },
   { img: drillingBits, label: 'Core & Drill Bits' },
-  { img: chuckJaws, label: 'Chuck Jaws' },
+  { img: headAssembly, label: 'Head Assembly' },
   { img: overshot, label: 'Overshot Assemblies' },
   { img: reamerBit, label: 'Reamers & Bit Systems' },
   { img: waterSwivel, label: 'Water Swivels' },
