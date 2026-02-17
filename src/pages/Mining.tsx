@@ -5,7 +5,7 @@ import PageSection from '../components/ui/PageSection'
 import miningImg from '../assets/home/miningImg.png'
 
 import drillRods from '../assets/mining/drill-rods.jpg'
-import drillCons from '../assets/mining/Drill_Cons.png'
+import drillCons from '../assets/mining/drill_cons.png'
 import drillingBits from '../assets/mining/dd-bits.jpg'
 import chuckJaws from '../assets/mining/chuck-jaws.jpg'
 import overshot from '../assets/mining/overshot.jpg'
