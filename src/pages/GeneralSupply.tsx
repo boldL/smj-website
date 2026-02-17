@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import PageSection from '../components/ui/PageSection'
-import generalSupplyImg from '../assets/home/generalSupplyImg.png'
+import generalSupplyImg from '../assets/home/generalSupplyImg.webp'
 
-import hardware from '../assets/general_supply/hardware.jpg'
-import lifting from '../assets/general_supply/lifting-equipment.jpg'
-import office from '../assets/general_supply/office-supplies.jpg'
-import ppe from '../assets/general_supply/ppe.jpeg'
+import hardware from '../assets/general_supply/hardware.webp'
+import lifting from '../assets/general_supply/lifting-equipment.webp'
+import office from '../assets/general_supply/office-supplies.webp'
+import ppe from '../assets/general_supply/ppe.webp'
 
 export default function GeneralSupply() {
   const scrollRef = useRef<HTMLDivElement | null>(null)

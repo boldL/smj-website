@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import travelImg from '../assets/home/travelImg.png'
+import travelImg from '../assets/home/travelImg.webp'
 
-import carHireImg from '../assets/travel/car-hire.jpg'
-import hotelImg from '../assets/travel/hotel.jpg'
-import safariImg from '../assets/travel/safari.jpg'
-import shuttleImg from '../assets/travel/airport-shuttle.jpg'
-import townTourImg from '../assets/travel/town-tour.jpg'
-import culturalImg from '../assets/travel/cultural-tour.jpg'
+import carHireImg from '../assets/travel/car-hire.webp'
+import hotelImg from '../assets/travel/hotel.webp'
+import safariImg from '../assets/travel/safari.webp'
+import shuttleImg from '../assets/travel/airport-shuttle.webp'
+import townTourImg from '../assets/travel/town-tour.webp'
+import culturalImg from '../assets/travel/cultural-tour.webp'
 
 const services = [
   {

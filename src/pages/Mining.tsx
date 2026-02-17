@@ -2,16 +2,16 @@ import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import PageSection from '../components/ui/PageSection'
 
-import miningImg from '../assets/home/miningImg.png'
+import miningImg from '../assets/home/miningImg.webp'
 
-import drillRods from '../assets/mining/drill-rods.jpg'
-import drillCons from '../assets/mining/drill_cons.png'
-import drillingBits from '../assets/mining/dd-bits.jpg'
-import headAssembly from '../assets/mining/head-assembly.jpg'
-import overshot from '../assets/mining/overshot.jpg'
-import reamerBit from '../assets/mining/reamer-and-bit.jpg'
-import waterSwivel from '../assets/mining/water-swivel.jpg'
-import wrenches from '../assets/mining/wrenches.jpg'
+import drillRods from '../assets/mining/drill-rods.webp'
+import drillCons from '../assets/mining/drill_cons.webp'
+import drillingBits from '../assets/mining/dd-bits.webp'
+import headAssembly from '../assets/mining/head-assembly.webp'
+import overshot from '../assets/mining/overshot.webp'
+import reamerBit from '../assets/mining/reamer-and-bit.webp'
+import waterSwivel from '../assets/mining/water-swivel.webp'
+import wrenches from '../assets/mining/wrenches.webp'
 
 const products = [
   { img: drillRods, label: 'Drill Rods' },

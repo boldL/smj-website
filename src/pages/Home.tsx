@@ -2,10 +2,10 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
-import equipmentHireImg from '../assets/home/equipmentHireImg.png'
-import generalSupplyImg from '../assets/home/generalSupplyImg.png'
-import miningImg from '../assets/home/miningImg.png'
-import travelImg from '../assets/home/travelImg.png'
+import equipmentHireImg from '../assets/home/equipmentHireImg.webp'
+import generalSupplyImg from '../assets/home/generalSupplyImg.webp'
+import miningImg from '../assets/home/miningImg.webp'
+import travelImg from '../assets/home/travelImg.webp'
 
 const sections = [
   {

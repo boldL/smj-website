@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import equipmentHireImg from '../assets/home/equipmentHireImg.png'
+import equipmentHireImg from '../assets/home/equipmentHireImg.webp'
 
-import craneImg from '../assets/equipment/crane.jpg'
-import excavatorImg from '../assets/equipment/excavator.jpg'
-import dumpTruckImg from '../assets/equipment/dump-truck.jpg'
-import graderImg from '../assets/equipment/grader.jpg'
-import telehandlerImg from '../assets/equipment/telehandler.jpg'
-import bulldozerImg from '../assets/equipment/bulldozer.jpg'
+import craneImg from '../assets/equipment/crane.webp'
+import excavatorImg from '../assets/equipment/excavator.webp'
+import dumpTruckImg from '../assets/equipment/dump-truck.webp'
+import graderImg from '../assets/equipment/grader.webp'
+import telehandlerImg from '../assets/equipment/telehandler.webp'
+import bulldozerImg from '../assets/equipment/bulldozer.webp'
 
 const equipmentCategories = [
   {
