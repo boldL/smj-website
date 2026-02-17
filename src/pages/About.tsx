@@ -1,5 +1,5 @@
 import PageSection from '../components/ui/PageSection'
-import travelImg from '../assets/home/travelImg.png'
+import travelImg from '../assets/home/about.jpg'
 
 export default function About() {
   return (

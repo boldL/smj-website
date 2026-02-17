@@ -138,7 +138,7 @@ export default function GeneralSupply() {
                   whileHover={{ scale: 1.04 }}
                   className={`
                     snap-center flex-shrink-0
-                    w-full md:w-1/2 lg:w-1/3
+                    w-[90%] md:w-[45%] lg:w-[30%]
                     rounded-xl overflow-hidden
                     border border-dark-700
                     bg-dark-850/80 backdrop-blur
@@ -177,14 +177,14 @@ export default function GeneralSupply() {
         </ul>
       </PageSection>
 
-      {/* WHY SMJ */}
+      {/* WHY SMJ 
       <PageSection title="Why SMJ">
         <p className="text-text-secondary max-w-3xl">
           We simplify procurement by acting as a single point of contact,
           reducing delays, vendor complexity, and supply risk while ensuring
           consistent quality delivery.
         </p>
-      </PageSection>
+      </PageSection> */}
 
       {/* CTA */}
       <PageSection title="Get in Touch">

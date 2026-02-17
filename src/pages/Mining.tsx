@@ -112,7 +112,7 @@ function ProductCarousel() {
                 border border-dark-700
                 shadow-[0_8px_20px_rgba(0,0,0,0.6)]
                 hover:shadow-[0_12px_30px_rgba(0,0,0,0.8)]
-                rounded-sm
+                rounded-xl
                 transition-all duration-300
               "
             >
@@ -170,7 +170,7 @@ export default function Mining() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl font-bold mb-4"
             >
-              Mining Consumables & Spare Parts
+              Mining Consumables
             </motion.h1>
 
             <motion.p

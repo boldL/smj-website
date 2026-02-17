@@ -21,8 +21,10 @@ export default function Footer() {
             </h5>
             <ul className="mt-4 space-y-2 text-sm text-text-secondary">
               <li>Mwanza, Tanzania</li>
+              <li>Rockcity Mall - 2nd Floor Wing C</li>
+              <li>P.O. Box 289, Furahisha/Makongoro Road</li>
               <li>info@smjtz.com</li>
-              <li>+255 XXX XXX XXX</li>
+              <li>+255 795 544 881</li>
             </ul>
           </div>
 
@@ -32,10 +34,10 @@ export default function Footer() {
               Services
             </h5>
             <ul className="mt-4 space-y-2 text-sm text-text-secondary">
-              <li>Mining Equipment & Supply</li>
+              <li>Mining Consumables Supply</li>
               <li>General Supply</li>
-              <li>Travel & Vehicle Hire</li>
-              <li>Equipment Hire</li>
+              <li>Travel & Vehicle Rental</li>
+              <li>Heavy Equipment Rental</li>
             </ul>
           </div>
 

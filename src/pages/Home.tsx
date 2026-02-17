@@ -9,7 +9,7 @@ import travelImg from '../assets/home/travelImg.png'
 
 const sections = [
   {
-    title: 'Mining Consumables & Spare Parts',
+    title: 'Mining Consumables',
     subtitle: 'Diamond drilling tools & technical supply',
     route: '/mining-supply',
     image: miningImg,
@@ -27,7 +27,7 @@ const sections = [
     image: travelImg,
   },
   {
-    title: 'Heavy Equipment / Machinery Hire',
+    title: 'Heavy Equipment Rental',
     subtitle: 'Reliable machines for demanding environments',
     route: '/equipment-hire',
     image: equipmentHireImg,

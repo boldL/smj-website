@@ -1,55 +1,150 @@
-import PageSection from '../components/ui/PageSection'
+import { motion } from 'framer-motion'
 import equipmentHireImg from '../assets/home/equipmentHireImg.png'
+
+import craneImg from '../assets/equipment/crane.jpg'
+import excavatorImg from '../assets/equipment/excavator.jpg'
+import dumpTruckImg from '../assets/equipment/dump-truck.jpg'
+import graderImg from '../assets/equipment/grader.jpg'
+import telehandlerImg from '../assets/equipment/telehandler.jpg'
+import bulldozerImg from '../assets/equipment/bulldozer.jpg'
+
+const equipmentCategories = [
+  {
+    title: 'Crane Trucks',
+    description:
+      'Heavy-duty crane truck hire solutions tailored for long-term infrastructure, mining, and construction projects requiring lifting precision and reliability.',
+    image: craneImg,
+  },
+  {
+    title: 'Excavators',
+    description:
+      'Reliable excavator hire for bulk earthworks, trenching, and structural groundwork across demanding project environments.',
+    image: excavatorImg,
+  },
+  {
+    title: 'Dump Trucks',
+    description:
+      'High-capacity dump truck hire for material transport across large-scale project sites with sustained operational demands.',
+    image: dumpTruckImg,
+  },
+  {
+    title: 'Graders',
+    description:
+      'Precision grading solutions for road construction, site leveling, and infrastructure preparation under long-term contracts.',
+    image: graderImg,
+  },
+  {
+    title: 'Telehandlers',
+    description:
+      'Versatile telehandler hire for site logistics, material handling, and elevated access support in structured project phases.',
+    image: telehandlerImg,
+  },
+  {
+    title: 'Bulldozers',
+    description:
+      'Powerful bulldozer hire designed for land clearing, bulk pushing, and foundational site preparation in heavy-duty operations.',
+    image: bulldozerImg,
+  },
+]
 
 export default function EquipmentHire() {
   return (
-    <div>
+    <div className="bg-dark-950 text-white">
+
       {/* HERO */}
       <section
-        className="h-[60vh] flex items-center"
+        className="relative h-[60vh] flex items-center"
         style={{
           backgroundImage: `url(${equipmentHireImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 mx-auto max-w-7xl px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Equipment & Machinery Hire
-          </h1>
-          <p className="text-text-secondary max-w-2xl">
-            Reliable machines and equipment hire solutions
-            for construction, mining, and industrial projects.
-          </p>
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+          >
+            Heavy Equipment Rental
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-text-secondary max-w-2xl"
+          >
+            Strategic heavy machinery hire solutions structured for long-term
+            project deployment across mining, construction, and industrial sectors.
+          </motion.p>
         </div>
       </section>
 
-      {/* EQUIPMENT */}
-      <PageSection title="Available Equipment">
-        <ul className="grid md:grid-cols-2 gap-6 text-text-secondary">
-          <li>Construction & earth-moving machinery</li>
-          <li>Site support equipment</li>
-          <li>Short-term and long-term hire options</li>
-          <li>Well-maintained and field-ready units</li>
-        </ul>
-      </PageSection>
+      {/* EQUIPMENT GRID */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10">
 
-      {/* RELIABILITY */}
-      <PageSection title="Built for Demanding Environments">
-        <p className="text-text-secondary max-w-3xl">
-          Our equipment is selected and maintained to perform
-          reliably in challenging environments, ensuring uptime
-          and operational continuity for your projects.
-        </p>
-      </PageSection>
+            {equipmentCategories.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative h-[42vh] rounded-xl overflow-hidden group cursor-pointer"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-black/75 group-hover:bg-black/65 transition-all duration-500" />
+
+                {/* Industrial gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+
+                {/* Content */}
+                <div className="relative z-10 h-full flex flex-col justify-end p-8">
+                  <h2 className="text-2xl font-semibold mb-3">
+                    {item.title}
+                  </h2>
+
+                  <p className="text-sm text-text-secondary max-w-md">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Red accent line */}
+                <div className="absolute bottom-0 left-0 h-1 w-0 bg-brand-red transition-all duration-500 group-hover:w-full" />
+              </motion.div>
+            ))}
+
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
-      <PageSection title="Hire Equipment">
-        <button className="btn-primary">
-          Request Equipment Hire Details
-        </button>
-      </PageSection>
+      <section className="py-20 px-6 border-t border-dark-800">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-6">
+            Discuss Your Project Requirements
+          </h2>
+          <p className="text-text-secondary mb-8">
+            We structure equipment hire around long-term operational efficiency,
+            project scale, and deployment timelines.
+          </p>
+
+          <button className="btn-primary">
+            Request Equipment Hire Proposal
+          </button>
+        </div>
+      </section>
+
     </div>
   )
 }
