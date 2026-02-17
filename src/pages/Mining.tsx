@@ -11,7 +11,7 @@ import chuckJaws from '../assets/mining/chuck-jaws.jpg'
 import overshot from '../assets/mining/overshot.jpg'
 import reamerBit from '../assets/mining/reamer-and-bit.jpg'
 import waterSwivel from '../assets/mining/water-swivel.jpg'
-import wrenches from '../assets/mining/Wrenches.jpg'
+import wrenches from '../assets/mining/wrenches.jpg'
 
 const products = [
   { img: drillRods, label: 'Drill Rods' },
