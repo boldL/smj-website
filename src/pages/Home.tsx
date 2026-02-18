@@ -10,25 +10,25 @@ import travelImg from '../assets/home/travelImg.webp'
 const sections = [
   {
     title: 'Mining Consumables',
-    subtitle: 'Diamond drilling tools & technical supply',
+    subtitle: 'Diamond Drilling Tools Supply & Technical Support',
     route: '/mining-supply',
     image: miningImg,
   },
   {
     title: 'General Supply',
-    subtitle: 'PPE, logistics & industrial sourcing',
+    subtitle: 'PPE, Logistics Solutions & Industrial Sourcing',
     route: '/general-supply',
     image: generalSupplyImg,
   },
   {
     title: 'Travel, Safaris & Vehicle Hire',
-    subtitle: 'Leisure-first mobility with corporate support',
+    subtitle: 'Leisure-first Mobility',
     route: '/travel-logistics',
     image: travelImg,
   },
   {
     title: 'Heavy Equipment Rental',
-    subtitle: 'Reliable machines for demanding environments',
+    subtitle: 'Reliable Machines For Demanding Environments',
     route: '/equipment-hire',
     image: equipmentHireImg,
   },

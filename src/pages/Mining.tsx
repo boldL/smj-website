@@ -183,7 +183,7 @@ export default function Mining() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-text-secondary max-w-2xl"
             >
-              Supplying reliable diamond drilling tools, consumables, and critical
+              Supplying reliable exploration drilling tools, consumables, and critical
               machine spares to exploration and mining operations.
             </motion.p>
           </div>
@@ -197,11 +197,10 @@ export default function Mining() {
         {/* WHAT WE SUPPLY */}
         <PageSection title="What We Supply">
           <ul className="grid md:grid-cols-2 gap-6 text-text-secondary">
-            <li>Diamond drilling tools & consumables</li>
-            <li>Drill machine spares & wear parts</li>
+            <li>Exploration drilling tools & consumables</li>
+            <li>Drilling machine spares & wear parts</li>
             <li>Core barrels, rods & accessories</li>
             <li>Technical sourcing for site-specific needs</li>
-            <li>Future expansion into RC & blast hole tools</li>
           </ul>
         </PageSection>
 

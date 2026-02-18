@@ -9,8 +9,8 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold">SMJ (T) Limited</h4>
             <p className="mt-4 text-sm text-text-secondary">
-              Industrial supply, mining solutions, logistics and equipment hire
-              services based in Mwanza, Tanzania.
+              Industrial Supply, Mining Supply Solutions, Logistics and Equipment Rental
+              Services Based in Mwanza, Tanzania.
             </p>
           </div>
 
