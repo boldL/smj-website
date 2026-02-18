@@ -1,93 +1,137 @@
-import PageSection from '../components/ui/PageSection'
-import travelImg from '../assets/home/about.webp'
+import { motion } from 'framer-motion'
+import { useContactModal } from '../context/ContactModalContext'
+import miningImg from '../assets/home/miningImg.webp'
 
 export default function About() {
+  const { openModal } = useContactModal()
+
   return (
-    <div>
+    <div className="relative bg-dark-900 text-white overflow-hidden">
+
+      {/* Subtle industrial glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(193,18,31,0.08),transparent_40%)] pointer-events-none" />
+
       {/* HERO */}
       <section
-        className="h-[60vh] flex items-center"
+        className="relative h-[65vh] flex items-center"
         style={{
-          backgroundImage: `url(${travelImg})`,
+          backgroundImage: `url(${miningImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/65" />
+
         <div className="relative z-10 mx-auto max-w-7xl px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            About SMJ Tanzania
-          </h1>
-          <p className="text-text-secondary max-w-2xl">
-            100% locally owned and operated since 2013, proudly based in Mwanza, Tanzania.
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+          >
+            About SMJ (T) Limited
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-text-secondary max-w-2xl"
+          >
+            A Tanzanian company evolving from tourism roots into a trusted
+            supplier for mining, industrial, logistics, and heavy equipment operations.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* COMPANY EVOLUTION */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-6">
+            Our Evolution
+          </h2>
+
+          <p className="text-text-secondary leading-relaxed mb-6">
+            Founded in 2013 and headquartered in Mwanza, SMJ began as a travel
+            and tours business serving local and international clients across Tanzania.
+            Over time, our operational exposure to logistics, fleet coordination,
+            and field-based support positioned us to expand into industrial supply.
+          </p>
+
+          <p className="text-text-secondary leading-relaxed">
+            Today, SMJ (T) Limited operates across multiple sectors including:
+            mining consumables supply, general industrial procurement, PPE sourcing,
+            heavy equipment rental, and project-based logistics support.
           </p>
         </div>
       </section>
 
-      {/* WHO WE ARE */}
-      <PageSection title="Who We Are">
-        <p className="text-text-secondary max-w-3xl leading-relaxed">
-          SMJ is a well-established Tanzanian business founded in 2013 and
-          headquartered in Mwanza. What began as a travel and tours company
-          has grown into a diversified enterprise serving the mining,
-          industrial, logistics, and tourism sectors.
-        </p>
-      </PageSection>
+      {/* CURRENT OPERATIONS GRID */}
+      <section className="py-20 px-6 bg-dark-850">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      {/* OUR ROOTS */}
-      <PageSection title="Our Roots in Tanzanian Tourism">
-        <p className="text-text-secondary max-w-3xl leading-relaxed mb-6">
-          Through SMJ Travel & Tours, we have delivered unique and authentic
-          Tanzania wildlife safaris, mountaineering treks, cultural experiences,
-          eco-tours, historical site visits, and relaxing beach holidays.
-        </p>
+          <div>
+            <h3 className="text-white font-semibold mb-3">Mining Consumables</h3>
+            <p className="text-text-secondary text-sm">
+              Diamond drilling tools, drill rods, core barrels,
+              spares, and site-specific sourcing for exploration operations.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 gap-6 text-text-secondary">
-          <div>Serengeti National Park</div>
-          <div>Tarangire National Park</div>
-          <div>Lake Manyara</div>
-          <div>Ngorongoro Crater</div>
-          <div>Mount Kilimanjaro</div>
-          <div>Saanane & Rubondo Island National Parks</div>
+          <div>
+            <h3 className="text-white font-semibold mb-3">General Supply</h3>
+            <p className="text-text-secondary text-sm">
+              PPE, industrial tools, lifting equipment,
+              logistics support and operational procurement solutions.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-3">Heavy Equipment Rental</h3>
+            <p className="text-text-secondary text-sm">
+              Excavators, crane trucks, graders,
+              dump trucks and site-ready machinery for long-term deployment.
+            </p>
+          </div>
+
         </div>
-      </PageSection>
+      </section>
 
-      {/* OUR PASSION */}
-      <PageSection title="Our Passion & Experience">
-        <p className="text-text-secondary max-w-3xl leading-relaxed">
-          We are deeply passionate about our wildlife, rich tribal cultures,
-          and the natural treasures that Tanzania has to offer. The combined
-          experience of our team reflects a deep understanding of wildlife
-          behavior, practical local knowledge of culture and history, and an
-          unwavering dedication to crafting personalized, unforgettable
-          experiences.
-        </p>
-      </PageSection>
+      {/* VALUES */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-6">
+            What Drives Us
+          </h2>
 
-      {/* OUR VALUES */}
-      <PageSection title="What Drives Us">
-        <div className="grid md:grid-cols-3 gap-8 text-text-secondary">
-          <div>
-            <h3 className="text-white font-semibold mb-2">Local Expertise</h3>
-            Authentic knowledge rooted in lived experience.
-          </div>
-          <div>
-            <h3 className="text-white font-semibold mb-2">Reliability</h3>
-            Professional delivery across tourism and industrial sectors.
-          </div>
-          <div>
-            <h3 className="text-white font-semibold mb-2">Long-Term Partnerships</h3>
-            Building trust with clients, suppliers, and communities.
+          <div className="grid md:grid-cols-3 gap-8 text-text-secondary">
+            <div>
+              <h3 className="text-white font-semibold mb-2">Operational Reliability</h3>
+              Structured supply systems and consistent delivery standards.
+            </div>
+            <div>
+              <h3 className="text-white font-semibold mb-2">Local Strength</h3>
+              Deep understanding of Tanzanian logistics and field conditions.
+            </div>
+            <div>
+              <h3 className="text-white font-semibold mb-2">Long-Term Partnerships</h3>
+              Built on trust with mines, contractors, and suppliers.
+            </div>
           </div>
         </div>
-      </PageSection>
+      </section>
 
       {/* CTA */}
-      <PageSection title="Work With SMJ">
-        <button className="btn-primary">
-          Get in Touch
+      <section className="py-20 px-6 text-center border-t border-dark-800">
+        <h2 className="text-3xl font-semibold mb-6">
+          Partner With SMJ
+        </h2>
+
+        <button onClick={openModal} className="btn-primary">
+          Discuss Business Opportunities
         </button>
-      </PageSection>
+      </section>
+
     </div>
   )
 }

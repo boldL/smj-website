@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import { useContactModal } from '../context/ContactModalContext'
+
 import equipmentHireImg from '../assets/home/equipmentHireImg.webp'
 
 import craneImg from '../assets/equipment/crane.webp'
@@ -48,8 +50,10 @@ const equipmentCategories = [
 ]
 
 export default function EquipmentHire() {
+  const { openModal } = useContactModal()
+
   return (
-    <div className="bg-dark-950 text-white">
+    <div className="bg-dark-900 text-white">
 
       {/* HERO */}
       <section
@@ -60,7 +64,7 @@ export default function EquipmentHire() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/65" />
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -78,7 +82,8 @@ export default function EquipmentHire() {
             className="text-text-secondary max-w-2xl"
           >
             Strategic heavy machinery hire solutions structured for long-term
-            project deployment across mining, construction, and industrial sectors.
+            deployment across mining sites, infrastructure projects, and industrial
+            operations in Tanzania.
           </motion.p>
         </div>
       </section>
@@ -95,17 +100,17 @@ export default function EquipmentHire() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="relative h-[42vh] rounded-xl overflow-hidden group cursor-pointer"
+                className="relative h-[42vh] rounded-xl overflow-hidden group"
                 style={{
                   backgroundImage: `url(${item.image})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
               >
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/75 group-hover:bg-black/65 transition-all duration-500" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-all duration-500" />
 
-                {/* Industrial gradient */}
+                {/* Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 
                 {/* Content */}
@@ -114,13 +119,20 @@ export default function EquipmentHire() {
                     {item.title}
                   </h2>
 
-                  <p className="text-sm text-text-secondary max-w-md">
+                  <p className="text-sm text-text-secondary max-w-md mb-4">
                     {item.description}
                   </p>
+
+                  <button
+                    onClick={openModal}
+                    className="text-sm font-semibold text-red-400 hover:underline"
+                  >
+                    Request Availability →
+                  </button>
                 </div>
 
-                {/* Red accent line */}
-                <div className="absolute bottom-0 left-0 h-1 w-0 bg-brand-red transition-all duration-500 group-hover:w-full" />
+                {/* Accent Line */}
+                <div className="absolute bottom-0 left-0 h-1 w-0 bg-red-500 transition-all duration-500 group-hover:w-full" />
               </motion.div>
             ))}
 
@@ -128,18 +140,22 @@ export default function EquipmentHire() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA SECTION */}
       <section className="py-20 px-6 border-t border-dark-800">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-6">
             Discuss Your Project Requirements
           </h2>
+
           <p className="text-text-secondary mb-8">
             We structure equipment hire around long-term operational efficiency,
             project scale, and deployment timelines.
           </p>
 
-          <button className="btn-primary">
+          <button
+            onClick={openModal}
+            className="btn-primary"
+          >
             Request Equipment Hire Proposal
           </button>
         </div>

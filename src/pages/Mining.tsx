@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useContactModal } from '../context/ContactModalContext'
 import PageSection from '../components/ui/PageSection'
 
 import miningImg from '../assets/home/miningImg.webp'
@@ -16,13 +17,14 @@ import wrenches from '../assets/mining/wrenches.webp'
 const products = [
   { img: drillRods, label: 'Drill Rods' },
   { img: drillCons, label: 'Head & Overshot Assy Parts' },
-  { img: drillingBits, label: 'Core & Drill Bits' },
-  { img: headAssembly, label: 'Head Assembly' },
+  { img: drillingBits, label: 'Core Drill Bits' },
+  { img: headAssembly, label: 'Head Assemblies' },
   { img: overshot, label: 'Overshot Assemblies' },
   { img: reamerBit, label: 'Reamers & Bit Systems' },
   { img: waterSwivel, label: 'Water Swivels' },
   { img: wrenches, label: 'Rod Wrenches' },
 ]
+
 
 function ProductCarousel() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -138,8 +140,10 @@ function ProductCarousel() {
 }
 
 export default function Mining() {
+  const {openModal} = useContactModal ()
+
   return (
-    <div className="relative min-h-screen bg-dark-950 overflow-hidden">
+    <div className="relative min-h-screen bg-dark-900 overflow-hidden">
 
       {/* Subtle Industrial Red Glow Layers */}
       <div className="absolute inset-0
@@ -170,7 +174,7 @@ export default function Mining() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl font-bold mb-4"
             >
-              Mining Consumables
+              Mining Consumables & Exploration Drilling Tools
             </motion.h1>
 
             <motion.p
@@ -203,7 +207,7 @@ export default function Mining() {
 
         {/* CTA */}
         <PageSection title="Talk to Us">
-          <button className="btn-primary">
+          <button onClick={openModal} className="btn-primary">
             Request Mining Supply Support
           </button>
         </PageSection>

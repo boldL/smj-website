@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion'
+import { useContactModal } from '../context/ContactModalContext'
+
+
 import travelImg from '../assets/home/travelImg.webp'
 
 import carHireImg from '../assets/travel/car-hire.webp'
@@ -48,8 +51,10 @@ const services = [
 ]
 
 export default function Travel() {
+  const { openModal } = useContactModal()
+
   return (
-    <div className="bg-dark-950 text-white">
+    <div className="bg-dark-900 text-white">
 
       {/* HERO */}
       <section
@@ -128,7 +133,7 @@ export default function Travel() {
         <h2 className="text-3xl font-semibold mb-6">
           Plan Your Journey
         </h2>
-        <button className="btn-primary">
+        <button onClick={openModal} className="btn-primary">
           Enquire About Travel & Vehicle Hire
         </button>
       </section>

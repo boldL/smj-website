@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useContactModal } from '../context/ContactModalContext'
 import PageSection from '../components/ui/PageSection'
 import generalSupplyImg from '../assets/home/generalSupplyImg.webp'
 
@@ -12,6 +13,7 @@ export default function GeneralSupply() {
   const scrollRef = useRef<HTMLDivElement | null>(null)
   const [index, setIndex] = useState(0)
   const [cardsPerView, setCardsPerView] = useState(3)
+  const {openModal} = useContactModal()
 
   const products = [
     { img: hardware, label: 'Industrial Tools & Hardware' },
@@ -62,7 +64,7 @@ export default function GeneralSupply() {
   }, [maxIndex, cardsPerView])
 
   return (
-    <div className="relative bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950">
+    <div className="relative bg-dark-900">
       
       {/* HERO */}
       <section
@@ -82,7 +84,7 @@ export default function GeneralSupply() {
           className="relative z-10 mx-auto max-w-7xl px-6"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            General Supply
+            Indunstrial General Supply
           </h1>
           <p className="text-text-secondary max-w-2xl">
             End-to-end sourcing of PPE, logistics support, and industrial
@@ -188,7 +190,7 @@ export default function GeneralSupply() {
 
       {/* CTA */}
       <PageSection title="Get in Touch">
-        <button className="btn-primary">
+        <button onClick={openModal} className="btn-primary">
           Discuss General Supply Requirements
         </button>
       </PageSection>
