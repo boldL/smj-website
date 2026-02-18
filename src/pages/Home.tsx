@@ -10,7 +10,7 @@ import travelImg from '../assets/home/travelImg.webp'
 const sections = [
   {
     title: 'Mining Consumables',
-    subtitle: 'Diamond Drilling Tools Supply & Technical Support',
+    subtitle: 'Exploration Drilling Tools Supply & Technical Support',
     route: '/mining-supply',
     image: miningImg,
   },

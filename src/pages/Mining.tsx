@@ -174,7 +174,7 @@ export default function Mining() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl font-bold mb-4"
             >
-              Mining Consumables & Exploration Drilling Tools
+              Mining & Exploration Drilling Consumables
             </motion.h1>
 
             <motion.p
